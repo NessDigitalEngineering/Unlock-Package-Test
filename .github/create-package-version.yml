@@ -1,0 +1,44 @@
+# This is a basic workflow that is manually triggered
+
+name: Create Package Version
+
+# Controls when the action will run. Workflow runs when manually triggered using the UI
+# or API.
+on:
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "create_package_version"
+  create_package_version:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+    - uses: actions/checkout@v2
+    # Runs a single command using the runners shell
+    - name: Install Salesforce CLI
+      run: |
+        wget https://developer.salesforce.com/media/salesforce-cli/sfdx-linux-amd64.tar.xz
+        mkdir sfdx-cli
+        tar xJf sfdx-linux-amd64.tar.xz -C sfdx-cli --strip-components 1
+        ./sfdx-cli/install  
+    - name: Install jq
+      run: |
+        sudo apt-get install jq
+    - name: Populate auth file
+      shell: bash
+      run: 'echo ${{ secrets.SALESFORCE_JWT_SECRET_KEY }} > ./server.key'
+    - name: Authenticate Dev Hub
+      run: 'sfdx force:auth:jwt:grant --clientid=${{ secrets.SALESFORCE_CONSUMER_KEY }} --jwtkeyfile=server.key --username=${{ secrets.SALESFORCE_DEVHUB_USERNAME }} --setdefaultdevhubusername'
+    - name: Create new version
+      run: |
+        sfdx force:package:version:create -x -c -v my-hub-org -p 0Ho5j0000008OanCAE -w 60
+    # - name: Install package
+    #   run: |
+    #     sfdx force:package:install --apex-compile all --target-org nitin.savanur-6fet@force.com.dev1 --package --wait 10 --publish-wait 10
+
+
+
+
