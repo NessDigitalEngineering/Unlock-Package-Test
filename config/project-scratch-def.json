@@ -1,13 +1,17 @@
 {
   "orgName": "WFS",
   "edition": "Developer",
-  "features": ["EnableSetPasswordInApi"],
+  "features": ["EnableSetPasswordInApi","SustainabilityApp"],
   "settings": {
     "lightningExperienceSettings": {
       "enableS1DesktopEnabled": true
     },
     "mobileSettings": {
       "enableS1EncryptedStoragePref2": false
+    },
+    "industriesSettings":{
+      "enableSustainabilityCloud": true,
+      "enableSCCarbonAccounting" : true
     }
   }
 }
