@@ -28,11 +28,11 @@ jobs:
       # Store secret for dev hub
       - name: 'Populate auth file with SALESFORCE_JWT_SECRET_KEY secret'
         # shell: bash
-        run: 'echo "$AUTH_FILE" > ./AuthFile.txt'
+        run: 'echo "$AUTH_FILE" > ./AuthFile.json'
 
       # Authenticate dev hub
       - name: 'Authenticate Dev Hub'
-        run: 'sfdx force:auth:sfdxurl:store -f ./AuthFile.txt -a devhub -d'
+        run: 'sfdx force:auth:sfdxurl:store -f ./AuthFile.json -a devhub -d'
 
       # Create scratch org
       - name: 'Create scratch org'
