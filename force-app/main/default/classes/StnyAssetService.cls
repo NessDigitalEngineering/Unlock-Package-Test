@@ -6,4 +6,8 @@ public with sharing class StnyAssetService {
     public List<Database.SaveResult> createRecords(List<StnryAssetEnvrSrc> assets){
         return Database.Insert(assets,true);
     }
+
+    public List<Database.SaveResult> updateRecords(List<StnryAssetEnvrSrc> assets){
+        return Database.Update(assets,true);
+    }
 }
