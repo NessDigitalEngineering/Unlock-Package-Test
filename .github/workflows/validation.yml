@@ -1,6 +1,6 @@
 # This executes unit tests on each pull request to develop branch
 
-name: Run Unit Tests
+name: Validation
 
 # Controls when the action will run. Workflow runs on pull request
 on:
