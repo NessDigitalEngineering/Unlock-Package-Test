@@ -1,0 +1,19 @@
+{
+  "status": 0,
+  "result": {
+    "id": "00D5j00000CAGZJEA5",
+    "apiVersion": "58.0",
+    "accessToken": "00D5j00000CAGZJ!ARwAQEY98sUermB8lm6H9Xv2QfkfQfXs25d5rWNPkwwUKyxuuBKMf8H3ZdyYjdS_jROe3NIpCZiJXsaBDdS8yVkHv3DqVDc2",
+    "instanceUrl": "https://nessdigitalengineering2.my.salesforce.com",
+    "username": "nitin.savanur-6fet@force.com",
+    "clientId": "3MVG9pRzvMkjMb6lexOERin0z.SrgX_uVc_GDYw9UlNTWqhQ2GFmZmrUPzRJxahNgP2FZMnNNJSGwo6hL_QT3",
+    "connectedStatus": "Connected",
+    "sfdxAuthUrl": "force://3MVG9pRzvMkjMb6lexOERin0z.SrgX_uVc_GDYw9UlNTWqhQ2GFmZmrUPzRJxahNgP2FZMnNNJSGwo6hL_QT3:26D684809E3ED3D784CCF705FCA93BE44BA80AF1D18C3BC259CCD87A2715509B:5Aep861mdLLi91HqFdnlhFs0xCFWj8ugxTDYTx8_IM55hHGeR56BhERpZGLzOXAO7UrSA.3ZnAx.UZ3pySE8TH8@nessdigitalengineering2.my.salesforce.com",
+    "alias": "my-hub-org"
+  },
+  "warnings": [
+    "The \"force org display\" command has been deprecated. Use \"org display\" instead.",
+    "The \"-u\" flag has been deprecated. Use \"--target-org | -o\" instead.",
+    "This command will expose sensitive information that allows for subsequent activity using your current authenticated session.\nSharing this information is equivalent to logging someone in under the current credential, resulting in unintended access and escalation of privilege.\nFor additional information, please review the authorization section of the https://developer.salesforce.com/docs/atlas.en-us.234.0.sfdx_dev.meta/sfdx_dev/sfdx_dev_auth_web_flow.htm"
+  ]
+}
