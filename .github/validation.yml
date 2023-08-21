@@ -50,6 +50,3 @@ jobs:
       - name: delete scratch org
         if: always()
         run: 'sfdx force:org:delete -p -u scratch-org'
-
-
-
