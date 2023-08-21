@@ -12,8 +12,9 @@
   "name": "DevOps",
   "namespace": "",
   "sfdcLoginUrl": "https://login.salesforce.com",
-  "sourceApiVersion": "57.0",
+  "sourceApiVersion": "58.0",
   "packageAliases": {
-    "WFS Test": "0Ho5j0000008OanCAE"
+    "WFS Test": "0Ho5j0000008OanCAE",
+    "WFS Test@0.1.0-1": "04t5j000000lFk0AAE"
   }
 }
