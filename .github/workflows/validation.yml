@@ -33,7 +33,6 @@ jobs:
       # Authenticate dev hub
       - name: 'Authenticate Dev Hub'
         run: |
-          echo ${{AuthFile.json}}
           sfdx auth:sfdxurl:store -f ./AuthFile.json -a devhub -d
 
       # Create scratch org
