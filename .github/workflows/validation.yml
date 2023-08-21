@@ -28,9 +28,7 @@ jobs:
       # Store secret for dev hub
       - name: 'Populate auth file with SALESFORCE_JWT_SECRET_KEY secret'
         # shell: bash
-        run: |  
-          echo ${{ secrets.SALESFORCE_JWT_SECRET_KEY}}
-          echo ${{ secrets.SALESFORCE_JWT_SECRET_KEY}} > ./server.key
+        run: 'echo "$SALESFORCE_JWT_SECRET_KEY" > ./server.key'
 
       # Authenticate dev hub
       - name: 'Authenticate Dev Hub'
