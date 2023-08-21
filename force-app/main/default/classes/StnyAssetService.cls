@@ -10,4 +10,8 @@ public with sharing class StnyAssetService {
     public List<Database.SaveResult> updateRecords(List<StnryAssetEnvrSrc> assets){
         return Database.Update(assets,true);
     }
+
+    public List<Database.SaveResult> deleteRecords(List<StnryAssetEnvrSrc> assets){
+        return Database.Delete(assets);
+    }
 }
